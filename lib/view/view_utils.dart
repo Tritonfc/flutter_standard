@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+
 
 class FlutterwaveViewUtils {
 
@@ -125,15 +125,16 @@ class FlutterwaveViewUtils {
     final snackBar = SnackBar(content: Text(text));
     ScaffoldMessenger.of(context).showSnackBar(snackBar);
   }
+  
 
 
   /// Displays a toast notification
-  static void showToast(BuildContext context, String text) {
-    Fluttertoast.showToast(
-        msg: text,
-        timeInSecForIosWeb: 1,
-        backgroundColor: Color(0xAA383737),
-        textColor: Colors.white,
-    );
-  }
+  // static void showToast(BuildContext context, String text) {
+  //   Fluttertoast.showToast(
+  //       msg: text,
+  //       timeInSecForIosWeb: 1,
+  //       backgroundColor: Color(0xAA383737),
+  //       textColor: Colors.white,
+  //   );
+  // }
 }

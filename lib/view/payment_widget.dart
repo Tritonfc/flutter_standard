@@ -58,7 +58,7 @@ class _PaymentState extends State<PaymentWidget>
               autofocus: true,
               onPressed: _handleButtonClicked,
               style: ElevatedButton.styleFrom(
-                  primary: widget.style.getButtonColor(),
+                  backgroundColor: widget.style.getButtonColor(),
                   textStyle: widget.style.getButtonTextStyle()),
               child: Text(
                 widget.style.getButtonText(),
@@ -95,7 +95,7 @@ class _PaymentState extends State<PaymentWidget>
   }
 
   void _showErrorAndClose(final String errorMessage) {
-    FlutterwaveViewUtils.showToast(widget.mainContext, errorMessage);
+    FlutterwaveViewUtils.showSnackBar(widget.mainContext, errorMessage);
     Navigator.pop(widget.mainContext); // return response to user
   }
 
@@ -118,7 +118,7 @@ class _PaymentState extends State<PaymentWidget>
 
   @override
   onCancelled() {
-    FlutterwaveViewUtils.showToast(widget.mainContext, "Transaction Cancelled");
+    FlutterwaveViewUtils.showSnackBar(widget.mainContext, "Transaction Cancelled");
     Navigator.pop(widget.mainContext);
   }
 
